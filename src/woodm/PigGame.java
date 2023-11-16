@@ -7,6 +7,30 @@
  */
 package woodm;
 
-public class PigGame {
+import java.util.ArrayList;
+import java.util.List;
 
+public class PigGame {
+    private final Die die;
+    private final List<Player> players;
+
+    public PigGame() {
+        this.players = new ArrayList<>();
+    }
+
+    public void addPlayer(Player player) {
+        players.add(player);
+    }
+
+    public Player playGame() {
+
+    }
+
+    public String toString() {
+
+    }
+
+    private void takeTurn(Player player) {
+
+    }
 }
