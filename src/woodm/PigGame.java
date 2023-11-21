@@ -26,12 +26,32 @@ public class PigGame {
 
     public Player playGame() {
         Collections.shuffle(this.players);
+        boolean hasWon = false;
+        final int winningScore = 100;
+        Player currentPlayer = null;
+        Player winner = null;
+        do {
+            for(int i = 0; i < this.players.size(); i++) {
+                if(winner == null) {
+                    currentPlayer = this.players.get(i);
+                    this.takeTurn(currentPlayer);
+                    if(currentPlayer.getScore() >= winningScore) {
+                        hasWon = true;
+                        winner = currentPlayer;
+                    }
+                }
+            }
+        } while(!hasWon);
+        return winner;
     }
 
     public String toString() {
         String str = "";
         for(int i = 0; i < this.players.size(); i++) {
             str += players.get(i);
+            if(i != this.players.size() - 1) {
+                str += "\n";
+            }
         }
         return str;
     }
@@ -42,13 +62,14 @@ public class PigGame {
         System.out.println(this);
         do {
             die.roll();
-            System.out.println(player.getName() + "rolled a " + die.getSideUp());
+            System.out.println(player.getName() + " rolled a " + die.getSideUp());
             if(die.getSideUp() == 1) {
                 System.out.println(player.getName() + " busts.");
                 holding = true;
             } else {
                 turnScore += die.getSideUp();
                 if(player.chooseToHold(turnScore)) {
+                    System.out.println(player.getName() + " holds.");
                     player.addToScore(turnScore);
                     holding = true;
                 }

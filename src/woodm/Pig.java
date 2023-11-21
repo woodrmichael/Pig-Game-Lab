@@ -1,9 +1,9 @@
 /*
- * Course: CSC1110 - FIXME
- * Winter 2022-23
- * Lab 3 - Pig Game
- * Name: FIXME
- * Created: FIXME
+ * Course: CSC1110 - 111
+ * Fall 2023
+ * Lab 12 - The Game of Pig
+ * Name: Michael Wood
+ * Created: 11/16/2023
  */
 package woodm;
 
