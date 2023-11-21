@@ -63,14 +63,14 @@ public class PigGame {
      * @return The scoreboard of the current game.
      */
     public String toString() {
-        String str = "";
+        StringBuilder str = new StringBuilder();
         for(int i = 0; i < this.players.size(); i++) {
-            str += players.get(i);
+            str.append(players.get(i));
             if(i != this.players.size() - 1) {
-                str += "\n";
+                str.append("\n");
             }
         }
-        return str;
+        return str.toString();
     }
 
     private void takeTurn(Player player) {
