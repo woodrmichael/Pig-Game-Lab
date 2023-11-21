@@ -17,7 +17,7 @@ public abstract class AIPlayer extends Player {
      * Creates an AI Player with a Name BOT# + numberOfAIPlayers.
      */
     public AIPlayer() {
-        super("BOT#" + numberOfAIPlayers);
+        super("BOT #" + numberOfAIPlayers);
         numberOfAIPlayers++;
     }
 }
