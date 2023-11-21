@@ -45,10 +45,7 @@ public abstract class Player {
      */
     public abstract boolean chooseToHold(int turnScore);
 
-    /**
-     * Returns a formatted String which includes the players name and their score.
-     * @return A formatted String of the players name and their score.
-     */
+    @Override
     public String toString() {
         return "    " + this.getName() + " :   " + this.getScore();
     }

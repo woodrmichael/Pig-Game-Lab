@@ -58,10 +58,7 @@ public class PigGame {
         return winner;
     }
 
-    /**
-     * Returns a formatted string of the scoreboard.
-     * @return The scoreboard of the current game.
-     */
+    @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
         for(int i = 0; i < this.players.size(); i++) {
