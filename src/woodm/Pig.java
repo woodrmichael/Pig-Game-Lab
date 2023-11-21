@@ -37,7 +37,6 @@ public class Pig {
 
     /**
      * Add one player to the game
-     *
      * Prompts for info depending on the player type.
      *
      * @param theGame The game of Pig!
