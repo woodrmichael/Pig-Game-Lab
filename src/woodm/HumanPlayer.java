@@ -29,7 +29,7 @@ public class HumanPlayer extends Player {
         String choice;
         do {
             System.out.println("Hold? [y/n]");
-            choice = in.nextLine();
+            choice = this.in.nextLine();
         } while(!choice.equalsIgnoreCase("y") && !choice.equalsIgnoreCase("n"));
         return choice.equalsIgnoreCase("y");
     }
